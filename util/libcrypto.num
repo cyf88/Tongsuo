@@ -957,6 +957,7 @@ ASN1_INTEGER_cmp                        1020	3_0_0	EXIST::FUNCTION:
 X509_NAME_entry_count                   1021	3_0_0	EXIST::FUNCTION:
 UI_method_set_closer                    1022	3_0_0	EXIST::FUNCTION:
 OPENSSL_LH_get_down_load                1023	3_0_0	EXIST::FUNCTION:
+EVP_md4                                 1024	3_0_0	EXIST::FUNCTION:MD4
 X509_set_subject_name                   1025	3_0_0	EXIST::FUNCTION:
 i2d_PKCS8PrivateKey_nid_bio             1026	3_0_0	EXIST::FUNCTION:
 ERR_put_error                           1027	3_0_0	NOEXIST::FUNCTION:
