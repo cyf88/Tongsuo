@@ -904,6 +904,9 @@ const EVP_MD *EVP_md_null(void);
 const EVP_MD *EVP_md5(void);
 const EVP_MD *EVP_md5_sha1(void);
 # endif
+# ifndef OPENSSL_NO_MD4
+const EVP_MD *EVP_md4(void);
+# endif
 const EVP_MD *EVP_sha1(void);
 const EVP_MD *EVP_sha224(void);
 const EVP_MD *EVP_sha256(void);
