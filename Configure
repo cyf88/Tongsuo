@@ -604,7 +604,6 @@ our %disabled = ( # "what"         => "comment"
                   "idea"                => "default", # IDEA has been removed
                   "md2"                 => "default", # MD2 has been removed
                   "mdc2"                => "default", # MDC2 has been removed
-                  "md4"                 => "default", # MD4 has been removed
                   "gost"                => "default", # GOST has been removed
                   "rc2"                 => "default", # RC2 has been removed
                   "rmd160"              => "default", # RIPEMD has been removed
