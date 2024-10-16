@@ -22,6 +22,10 @@ IF[{- !$disabled{sm3} -}]
   SOURCE[$SM3_GOAL]=sm3_prov.c
 ENDIF
 
+IF[{- !$disabled{md4} -}]
+  SOURCE[$MD4_GOAL]=md4_prov.c
+ENDIF
+
 IF[{- !$disabled{md5} -}]
   SOURCE[$MD5_GOAL]=md5_prov.c md5_sha1_prov.c
 ENDIF
