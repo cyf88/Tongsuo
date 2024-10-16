@@ -10,7 +10,7 @@
  */
 
 /* Serialized OID's */
-static const unsigned char so[6628] = {
+static const unsigned char so[6645] = {
     0x2A,0x86,0x48,0x86,0xF7,0x0D,                 /* [    0] OBJ_rsadsi */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,            /* [    6] OBJ_pkcs */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x05,       /* [   13] OBJ_md5 */
@@ -931,9 +931,11 @@ static const unsigned char so[6628] = {
     0x2A,0x81,0x1C,0xCF,0x55,0x01,0x83,0x11,0x03,0x01,  /* [ 6598] OBJ_hmacWithSM3 */
     0x60,0x86,0x48,0x01,0x86,0xF9,0x66,            /* [ 6608] OBJ_oracle */
     0x60,0x86,0x48,0x01,0x86,0xF9,0x66,0xAD,0xCA,0x7B,0x01,0x01,  /* [ 6615] OBJ_oracle_jdk_trustedkeyusage */
+    0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x01,0x03,  /* [ 6627] OBJ_md4WithRSAEncryption */
+    0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x04,       /* [ 6636] OBJ_md4 */
 };
 
-#define NUM_NID 1260
+#define NUM_NID 1262
 static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"UNDEF", "undefined", NID_undef},
     {"rsadsi", "RSA Data Security, Inc.", NID_rsadsi, 6, &so[0]},
@@ -2195,9 +2197,11 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"hmacWithSM3", "hmacWithSM3", NID_hmacWithSM3, 10, &so[6598]},
     {"oracle-organization", "Oracle organization", NID_oracle, 7, &so[6608]},
     {"oracle-jdk-trustedkeyusage", "Trusted key usage (Oracle)", NID_oracle_jdk_trustedkeyusage, 12, &so[6615]},
+    {"RSA-MD4", "md4WithRSAEncryption", NID_md4WithRSAEncryption, 9, &so[6627]},
+    {"MD4", "md4", NID_md4, 8, &so[6636]},
 };
 
-#define NUM_SN 1010
+#define NUM_SN 1012
 static const unsigned int sn_objs[NUM_SN] = {
      364,    /* "AD_DVCS" */
      419,    /* "AES-128-CBC" */
@@ -2307,6 +2311,7 @@ static const unsigned int sn_objs[NUM_SN] = {
     1044,    /* "KxSRP" */
       15,    /* "L" */
      856,    /* "LocalKeySet" */
+    1261,    /* "MD4" */
        4,    /* "MD5" */
      114,    /* "MD5-SHA1" */
      911,    /* "MGF1" */
@@ -2342,6 +2347,7 @@ static const unsigned int sn_objs[NUM_SN] = {
      121,    /* "RC5-ECB" */
      123,    /* "RC5-OFB" */
       19,    /* "RSA" */
+    1260,    /* "RSA-MD4" */
        8,    /* "RSA-MD5" */
      104,    /* "RSA-NP-MD5" */
       42,    /* "RSA-SHA" */
@@ -3211,7 +3217,7 @@ static const unsigned int sn_objs[NUM_SN] = {
     1093,    /* "x509ExtAdmission" */
 };
 
-#define NUM_LN 1010
+#define NUM_LN 1012
 static const unsigned int ln_objs[NUM_LN] = {
      363,    /* "AD Time Stamping" */
      405,    /* "ANSI X9.62" */
@@ -3862,6 +3868,8 @@ static const unsigned int ln_objs[NUM_LN] = {
      480,    /* "mXRecord" */
      493,    /* "mailPreferenceOption" */
      467,    /* "manager" */
+    1261,    /* "md4" */
+    1260,    /* "md4WithRSAEncryption" */
        4,    /* "md5" */
      114,    /* "md5-sha1" */
      104,    /* "md5WithRSA" */
@@ -4225,7 +4233,7 @@ static const unsigned int ln_objs[NUM_LN] = {
     1255,    /* "zuc-128-eia3" */
 };
 
-#define NUM_OBJ 926
+#define NUM_OBJ 928
 static const unsigned int obj_objs[NUM_OBJ] = {
        0,    /* OBJ_undef                        0 */
      181,    /* OBJ_iso                          1 */
@@ -4622,6 +4630,7 @@ static const unsigned int obj_objs[NUM_OBJ] = {
      187,    /* OBJ_pkcs5                        1 2 840 113549 1 5 */
       20,    /* OBJ_pkcs7                        1 2 840 113549 1 7 */
       47,    /* OBJ_pkcs9                        1 2 840 113549 1 9 */
+    1261,    /* OBJ_md4                          1 2 840 113549 2 4 */
        4,    /* OBJ_md5                          1 2 840 113549 2 5 */
      797,    /* OBJ_hmacWithMD5                  1 2 840 113549 2 6 */
      163,    /* OBJ_hmacWithSHA1                 1 2 840 113549 2 7 */
@@ -4818,6 +4827,7 @@ static const unsigned int obj_objs[NUM_OBJ] = {
      782,    /* OBJ_id_PasswordBasedMAC          1 2 840 113533 7 66 13 */
      783,    /* OBJ_id_DHBasedMac                1 2 840 113533 7 66 30 */
        6,    /* OBJ_rsaEncryption                1 2 840 113549 1 1 1 */
+    1260,    /* OBJ_md4WithRSAEncryption         1 2 840 113549 1 1 3 */
        8,    /* OBJ_md5WithRSAEncryption         1 2 840 113549 1 1 4 */
       65,    /* OBJ_sha1WithRSAEncryption        1 2 840 113549 1 1 5 */
      644,    /* OBJ_rsaOAEPEncryptionSET         1 2 840 113549 1 1 6 */
