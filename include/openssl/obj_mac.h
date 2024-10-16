@@ -527,7 +527,6 @@
 #define NID_md4WithRSAEncryption                396
 #define OBJ_md4WithRSAEncryption                OBJ_pkcs1,3L
 
-
 #define SN_md5WithRSAEncryption         "RSA-MD5"
 #define LN_md5WithRSAEncryption         "md5WithRSAEncryption"
 #define NID_md5WithRSAEncryption                8
