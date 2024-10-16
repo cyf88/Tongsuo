@@ -29,6 +29,7 @@ static const nid_triple sigoid_srt[] = {
     {NID_dsaWithSHA1, NID_sha1, NID_dsa},
     {NID_sha1WithRSA, NID_sha1, NID_rsa},
     {NID_ecdsa_with_SHA1, NID_sha1, NID_X9_62_id_ecPublicKey},
+    {NID_md4WithRSAEncryption, NID_md4, NID_rsaEncryption},
     {NID_sha256WithRSAEncryption, NID_sha256, NID_rsaEncryption},
     {NID_sha384WithRSAEncryption, NID_sha384, NID_rsaEncryption},
     {NID_sha512WithRSAEncryption, NID_sha512, NID_rsaEncryption},
